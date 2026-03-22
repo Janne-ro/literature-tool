@@ -4,7 +4,7 @@ import { formatAuthors } from '../../utils/csvUtils'
 import { getNodeColor } from '../../utils/colorUtils'
 
 export default function PaperTable(): JSX.Element {
-  const { filteredPapers, selectPaper, selectedPaperId } = usePapers()
+  const { filteredPapers, selectPaper, selectedPaperId, aiHighlightIds } = usePapers()
 
   if (filteredPapers.length === 0) {
     return (
@@ -35,7 +35,13 @@ export default function PaperTable(): JSX.Element {
             return (
               <tr
                 key={paper.id}
-                className={`paper-table-row ${paper.id === selectedPaperId ? 'paper-table-row--selected' : ''}`}
+                className={[
+                  'paper-table-row',
+                  paper.id === selectedPaperId ? 'paper-table-row--selected' : '',
+                  aiHighlightIds.has(paper.id) ? 'paper-table-row--ai-highlight' : ''
+                ]
+                  .filter(Boolean)
+                  .join(' ')}
                 onClick={() => selectPaper(paper.id)}
               >
                 <td className="table-id">{paper.id}</td>

@@ -23,6 +23,7 @@ interface PaperContextType {
   allTags: string[]
   yearBounds: { min: number; max: number }
   sidebarOpen: boolean
+  aiHighlightIds: Set<string>
 
   selectPaper: (id: string | null) => void
   updatePaper: (paper: Paper) => void
@@ -32,6 +33,7 @@ interface PaperContextType {
   setFilter: (filter: Partial<Filter>) => void
   updateNodePosition: (id: string, position: NodePosition) => void
   setSidebarOpen: (open: boolean) => void
+  setAiHighlightIds: (ids: Set<string>) => void
   nextId: () => string
 }
 
@@ -59,6 +61,7 @@ export function PaperProvider({ children }: { children: React.ReactNode }): JSX.
   })
   const [sidebarOpen, setSidebarOpenState] = useState(true)
   const [tagColorMap, setTagColorMap] = useState<Map<string, string>>(new Map())
+  const [aiHighlightIds, setAiHighlightIdsState] = useState<Set<string>>(new Set())
 
   // Debounce layout saves
   const layoutSaveTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -172,6 +175,7 @@ export function PaperProvider({ children }: { children: React.ReactNode }): JSX.
   const setView = useCallback((view: 'map' | 'table') => setActiveView(view), [])
   const setLabelMode = useCallback((mode: 'title' | 'authors') => setLabelModeState(mode), [])
   const setSidebarOpen = useCallback((open: boolean) => setSidebarOpenState(open), [])
+  const setAiHighlightIds = useCallback((ids: Set<string>) => setAiHighlightIdsState(ids), [])
 
   const setFilter = useCallback((partial: Partial<Filter>) => {
     setFilterState((prev) => ({ ...prev, ...partial }))
@@ -203,6 +207,7 @@ export function PaperProvider({ children }: { children: React.ReactNode }): JSX.
       allTags,
       yearBounds,
       sidebarOpen,
+      aiHighlightIds,
       selectPaper,
       updatePaper,
       addPaper,
@@ -211,6 +216,7 @@ export function PaperProvider({ children }: { children: React.ReactNode }): JSX.
       setFilter,
       updateNodePosition,
       setSidebarOpen,
+      setAiHighlightIds,
       nextId
     }),
     [
@@ -225,6 +231,7 @@ export function PaperProvider({ children }: { children: React.ReactNode }): JSX.
       allTags,
       yearBounds,
       sidebarOpen,
+      aiHighlightIds,
       selectPaper,
       updatePaper,
       addPaper,
@@ -233,6 +240,7 @@ export function PaperProvider({ children }: { children: React.ReactNode }): JSX.
       setFilter,
       updateNodePosition,
       setSidebarOpen,
+      setAiHighlightIds,
       nextId
     ]
   )

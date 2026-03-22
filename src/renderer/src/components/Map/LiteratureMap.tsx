@@ -21,8 +21,10 @@ import '@xyflow/react/dist/style.css'
 import { usePapers } from '../../context/PaperContext'
 import { getNodeColor } from '../../utils/colorUtils'
 import PaperNode, { PaperNodeData } from './PaperNode'
+import FloatingEdge from './FloatingEdge'
 
 const nodeTypes = { paper: PaperNode }
+const edgeTypes = { floating: FloatingEdge }
 
 export default function LiteratureMap(): JSX.Element {
   const {
@@ -30,6 +32,7 @@ export default function LiteratureMap(): JSX.Element {
     layout,
     selectedPaperId,
     labelMode,
+    aiHighlightIds,
     selectPaper,
     updateNodePosition
   } = usePapers()
@@ -45,7 +48,8 @@ export default function LiteratureMap(): JSX.Element {
       data: {
         paper,
         labelMode,
-        selected: paper.id === selectedPaperId
+        selected: paper.id === selectedPaperId,
+        aiHighlighted: aiHighlightIds.has(paper.id)
       } satisfies PaperNodeData,
       selected: paper.id === selectedPaperId
     }))
@@ -59,11 +63,10 @@ export default function LiteratureMap(): JSX.Element {
         if (filteredIds.has(rel.targetId)) {
           edges.push({
             id: `${paper.id}->${rel.targetId}`,
+            type: 'floating',
             source: paper.id,
             target: rel.targetId,
             label: rel.label || undefined,
-            labelStyle: { fill: '#a0a0b8', fontSize: 11 },
-            labelBgStyle: { fill: '#1a1a2e', fillOpacity: 0.85 },
             style: { stroke: '#4a4a6a', strokeWidth: 1.5 },
             markerEnd: { type: MarkerType.ArrowClosed, color: '#4a4a6a' }
           })
@@ -109,6 +112,7 @@ export default function LiteratureMap(): JSX.Element {
         nodes={nodes}
         edges={edges}
         nodeTypes={nodeTypes}
+        edgeTypes={edgeTypes}
         onNodesChange={onNodesChange as OnNodesChange}
         onEdgesChange={onEdgesChange as OnEdgesChange}
         onNodeDragStop={onNodeDragStop}

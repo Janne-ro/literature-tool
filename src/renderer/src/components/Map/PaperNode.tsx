@@ -8,20 +8,34 @@ export type PaperNodeData = {
   paper: Paper
   labelMode: 'title' | 'authors'
   selected: boolean
+  aiHighlighted: boolean
 }
 
+/** Invisible handle style — still required by React Flow for edge connectivity */
+const hiddenHandle: React.CSSProperties = { opacity: 0, pointerEvents: 'none' }
+
 function PaperNode({ data }: NodeProps): JSX.Element {
-  const { paper, labelMode, selected } = data as PaperNodeData
+  const { paper, labelMode, selected, aiHighlighted } = data as PaperNodeData
   const color = getNodeColor(paper.tags)
   const label =
     labelMode === 'authors' ? formatAuthors(paper.authors) || paper.title : paper.title
 
   return (
     <div
-      className={`paper-node ${selected ? 'paper-node--selected' : ''}`}
+      className={[
+        'paper-node',
+        selected ? 'paper-node--selected' : '',
+        aiHighlighted ? 'paper-node--ai-highlight' : ''
+      ]
+        .filter(Boolean)
+        .join(' ')}
       style={{ '--node-color': color } as React.CSSProperties}
     >
-      <Handle type="target" position={Position.Left} className="paper-node-handle" />
+      {/* Four invisible handles on every side — FloatingEdge picks its own attach point */}
+      <Handle id="t" type="target"  position={Position.Top}    style={hiddenHandle} />
+      <Handle id="r" type="source"  position={Position.Right}  style={hiddenHandle} />
+      <Handle id="b" type="source"  position={Position.Bottom} style={hiddenHandle} />
+      <Handle id="l" type="target"  position={Position.Left}   style={hiddenHandle} />
 
       <div className="paper-node-color-bar" style={{ background: color }} />
 
@@ -36,8 +50,6 @@ function PaperNode({ data }: NodeProps): JSX.Element {
           </div>
         )}
       </div>
-
-      <Handle type="source" position={Position.Right} className="paper-node-handle" />
     </div>
   )
 }
