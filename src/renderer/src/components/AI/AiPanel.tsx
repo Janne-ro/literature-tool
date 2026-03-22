@@ -147,6 +147,7 @@ export default function AiPanel(): JSX.Element {
   const [error, setError] = useState('')
   const [lastQuestion, setLastQuestion] = useState('')
   const [chatHistory, setChatHistory] = useState<ChatEntry[]>(() => loadHistory())
+  const [expandedEntryId, setExpandedEntryId] = useState<string | null>(null)
   const textareaRef = useRef<HTMLTextAreaElement>(null)
 
   // Auto-grow textarea
@@ -165,6 +166,7 @@ export default function AiPanel(): JSX.Element {
     setLoading(true)
     setError('')
     setResults([])
+    setExpandedEntryId(null)
     setAiHighlightIds(new Set()) // clear previous highlights immediately
 
     try {
@@ -212,6 +214,20 @@ export default function AiPanel(): JSX.Element {
   function handleClearHistory(): void {
     setChatHistory([])
     saveHistory([])
+    setExpandedEntryId(null)
+    setAiHighlightIds(new Set())
+  }
+
+  function handleToggleEntry(entry: ChatEntry): void {
+    if (expandedEntryId === entry.id) {
+      // Collapse: clear glow
+      setExpandedEntryId(null)
+      setAiHighlightIds(new Set())
+    } else {
+      // Expand: restore glow for this entry's papers
+      setExpandedEntryId(entry.id)
+      setAiHighlightIds(new Set(entry.results.map((r) => r.id)))
+    }
   }
 
   const paperCount = filteredPapers.length
@@ -284,31 +300,59 @@ export default function AiPanel(): JSX.Element {
             </button>
           </div>
           <div className="ai-history-list">
-            {chatHistory.map((entry) => (
-              <div key={entry.id} className="ai-history-entry">
-                <div className="ai-history-entry-meta">
-                  <span className="ai-history-ts">{formatTimestamp(entry.timestamp)}</span>
-                  <span className="ai-history-count">
-                    {entry.results.length} result{entry.results.length !== 1 ? 's' : ''} / {entry.paperCount} papers
-                  </span>
-                </div>
-                <div className="ai-history-question">&ldquo;{entry.question}&rdquo;</div>
-                {entry.results.length > 0 && (
-                  <div className="ai-history-chips">
-                    {entry.results.map((r) => (
-                      <button
-                        key={r.id}
-                        className="ai-result-id ai-history-chip"
-                        onClick={() => selectPaper(r.id)}
-                        title={r.title}
-                      >
-                        {r.id}
-                      </button>
-                    ))}
+            {chatHistory.map((entry) => {
+              const isExpanded = expandedEntryId === entry.id
+              return (
+                <div
+                  key={entry.id}
+                  className={['ai-history-entry', isExpanded ? 'ai-history-entry--expanded' : ''].filter(Boolean).join(' ')}
+                >
+                  <div
+                    className="ai-history-entry-header"
+                    onClick={() => handleToggleEntry(entry)}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => e.key === 'Enter' && handleToggleEntry(entry)}
+                  >
+                    <div className="ai-history-entry-meta">
+                      <span className="ai-history-ts">{formatTimestamp(entry.timestamp)}</span>
+                      <span className="ai-history-count">
+                        {entry.results.length} result{entry.results.length !== 1 ? 's' : ''} / {entry.paperCount} papers
+                      </span>
+                    </div>
+                    <div className="ai-history-question">&ldquo;{entry.question}&rdquo;</div>
+                    {!isExpanded && entry.results.length > 0 && (
+                      <div className="ai-history-chips">
+                        {entry.results.map((r) => (
+                          <span key={r.id} className="ai-result-id ai-history-chip">{r.id}</span>
+                        ))}
+                      </div>
+                    )}
                   </div>
-                )}
-              </div>
-            ))}
+
+                  {isExpanded && entry.results.length > 0 && (
+                    <div className="ai-result-list ai-history-result-list">
+                      {entry.results.map((r) => (
+                        <div key={r.id} className="ai-result-item">
+                          <button
+                            className="ai-result-id"
+                            onClick={() => selectPaper(r.id)}
+                            title="Click to select this paper"
+                          >
+                            {r.id}
+                          </button>
+                          <div className="ai-result-title">{r.title}</div>
+                          <div className="ai-result-reason">{r.reason}</div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  {isExpanded && entry.results.length === 0 && (
+                    <div className="ai-no-results">No relevant papers were found.</div>
+                  )}
+                </div>
+              )
+            })}
           </div>
         </div>
       )}

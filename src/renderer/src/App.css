@@ -1048,10 +1048,30 @@ html, body, #root {
   background: #12121a;
   border: 1px solid #2d2d3d;
   border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-history-entry--expanded {
+  border-color: var(--ai);
+  box-shadow: 0 0 0 1px var(--ai-dim);
+}
+
+.ai-history-entry-header {
   padding: 8px 10px;
   display: flex;
   flex-direction: column;
   gap: 4px;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+.ai-history-entry-header:hover { background: #1a1a2a; }
+.ai-history-entry--expanded .ai-history-entry-header { background: #16161f; }
+
+.ai-history-result-list {
+  border-top: 1px solid #2d2d3d;
+  padding: 6px 10px 8px;
 }
 
 .ai-history-entry-meta {
