@@ -1,0 +1,3 @@
+ID,Link,Authors,Year,Title,Article type,Venue,Direct quotes,Other info,Bibtex citation,Related papers,Tags
+ID_001,https://eric.ed.gov/?id=EJ1086242,Sajna Jaleel;P Premachandran,2016,A Study on the Metacognitive Awareness of Secondary School Students,Article,Universal Journal of Educational Research,**Test 1**,Test 1,@article{jaleel2016study},ID_002 | Same methodology,Metacognition;Empirical
+ID_002,https://eric.ed.gov/?id=EJ1086242,Janne Rotter;William Bailkoski,2026,AI Adoption in NGOs: A Systematic Literature Review,Article,ACM JCSS,Test 1.1;Test 2.1,Test 1.1,@article{rotter2026ai},,Survey
