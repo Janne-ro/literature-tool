@@ -1001,3 +1001,90 @@ html, body, #root {
   color: var(--text2);
   line-height: 1.5;
 }
+
+/* History */
+.ai-history {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid #2d2d3d;
+  padding-top: 10px;
+  margin-top: 4px;
+}
+
+.ai-history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text3);
+}
+
+.ai-history-clear {
+  background: none;
+  border: 1px solid #3a3a4a;
+  border-radius: 4px;
+  color: var(--text3);
+  font-size: 10px;
+  padding: 1px 6px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+.ai-history-clear:hover { color: var(--text); border-color: var(--text2); }
+
+.ai-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.ai-history-entry {
+  background: #12121a;
+  border: 1px solid #2d2d3d;
+  border-radius: 6px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ai-history-entry-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ai-history-ts {
+  font-size: 10px;
+  color: var(--text3);
+}
+
+.ai-history-count {
+  font-size: 10px;
+  color: var(--text3);
+}
+
+.ai-history-question {
+  font-size: 12px;
+  color: var(--text);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.ai-history-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 2px;
+}
+
+.ai-history-chip {
+  font-size: 10px;
+  padding: 1px 6px;
+}

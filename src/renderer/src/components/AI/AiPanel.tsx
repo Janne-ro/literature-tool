@@ -8,10 +8,47 @@ interface AiResult {
   title: string
 }
 
+interface ChatEntry {
+  id: string
+  timestamp: number
+  question: string
+  paperCount: number
+  results: AiResult[]
+}
+
+// ── Persistence ──────────────────────────────────────────────────────────────
+
+const STORAGE_KEY = 'literature-tool-ai-history'
+const MAX_HISTORY = 50
+
+function loadHistory(): ChatEntry[] {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY)
+    if (!raw) return []
+    return JSON.parse(raw) as ChatEntry[]
+  } catch {
+    return []
+  }
+}
+
+function saveHistory(history: ChatEntry[]): void {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(history))
+  } catch {
+    // storage full or unavailable — silently ignore
+  }
+}
+
+function formatTimestamp(ts: number): string {
+  const d = new Date(ts)
+  return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric' }) +
+    ' ' + d.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' })
+}
+
 // ── Prompt builder ──────────────────────────────────────────────────────────
 
-const QUOTE_MAX = 300
-const NOTE_MAX = 200
+const QUOTE_MAX = 450
+const NOTE_MAX = 300
 
 function truncate(s: string, max: number): string {
   return s.length <= max ? s : s.slice(0, max) + '…'
@@ -109,6 +146,7 @@ export default function AiPanel(): JSX.Element {
   const [results, setResults] = useState<AiResult[]>([])
   const [error, setError] = useState('')
   const [lastQuestion, setLastQuestion] = useState('')
+  const [chatHistory, setChatHistory] = useState<ChatEntry[]>(() => loadHistory())
   const textareaRef = useRef<HTMLTextAreaElement>(null)
 
   // Auto-grow textarea
@@ -143,6 +181,20 @@ export default function AiPanel(): JSX.Element {
       setResults(enriched)
       setLastQuestion(q)
       setAiHighlightIds(new Set(enriched.map((r) => r.id)))
+
+      // Persist to history
+      const entry: ChatEntry = {
+        id: `${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
+        timestamp: Date.now(),
+        question: q,
+        paperCount: filteredPapers.length,
+        results: enriched
+      }
+      setChatHistory((prev) => {
+        const updated = [entry, ...prev].slice(0, MAX_HISTORY)
+        saveHistory(updated)
+        return updated
+      })
     } catch (err) {
       setError(err instanceof Error ? err.message : String(err))
     } finally {
@@ -155,6 +207,11 @@ export default function AiPanel(): JSX.Element {
       e.preventDefault()
       handleSubmit()
     }
+  }
+
+  function handleClearHistory(): void {
+    setChatHistory([])
+    saveHistory([])
   }
 
   const paperCount = filteredPapers.length
@@ -193,7 +250,7 @@ export default function AiPanel(): JSX.Element {
             <span className="ai-results-count">
               {results.length} relevant paper{results.length !== 1 ? 's' : ''}
             </span>
-            <span className="ai-results-q">for "{lastQuestion}"</span>
+            <span className="ai-results-q">for &ldquo;{lastQuestion}&rdquo;</span>
           </div>
 
           <div className="ai-result-list">
@@ -216,6 +273,44 @@ export default function AiPanel(): JSX.Element {
 
       {!loading && results.length === 0 && lastQuestion && !error && (
         <div className="ai-no-results">No relevant papers found for this question.</div>
+      )}
+
+      {chatHistory.length > 0 && (
+        <div className="ai-history">
+          <div className="ai-history-header">
+            <span>Chat history</span>
+            <button className="ai-history-clear" onClick={handleClearHistory} title="Clear all history">
+              Clear
+            </button>
+          </div>
+          <div className="ai-history-list">
+            {chatHistory.map((entry) => (
+              <div key={entry.id} className="ai-history-entry">
+                <div className="ai-history-entry-meta">
+                  <span className="ai-history-ts">{formatTimestamp(entry.timestamp)}</span>
+                  <span className="ai-history-count">
+                    {entry.results.length} result{entry.results.length !== 1 ? 's' : ''} / {entry.paperCount} papers
+                  </span>
+                </div>
+                <div className="ai-history-question">&ldquo;{entry.question}&rdquo;</div>
+                {entry.results.length > 0 && (
+                  <div className="ai-history-chips">
+                    {entry.results.map((r) => (
+                      <button
+                        key={r.id}
+                        className="ai-result-id ai-history-chip"
+                        onClick={() => selectPaper(r.id)}
+                        title={r.title}
+                      >
+                        {r.id}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
       )}
     </div>
   )
