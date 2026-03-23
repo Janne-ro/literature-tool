@@ -2,6 +2,7 @@ import React from 'react'
 import { Paper } from '../../types/paper'
 import { usePapers } from '../../context/PaperContext'
 import MarkdownField from '../common/MarkdownField'
+import RelatedPapersEditor from '../common/RelatedPapersEditor'
 import { formatAuthors } from '../../utils/csvUtils'
 
 function listToStr(arr: string[]): string {
@@ -15,24 +16,6 @@ function strToList(s: string): string[] {
     .filter(Boolean)
 }
 
-interface RelatedEntry {
-  targetId: string
-  label: string
-}
-
-function relatedToStr(related: RelatedEntry[]): string {
-  return related.map((r) => `${r.targetId} | ${r.label}`).join('; ')
-}
-
-function strToRelated(s: string): RelatedEntry[] {
-  return s
-    .split(';')
-    .map((x) => {
-      const [id, ...rest] = x.split('|')
-      return { targetId: id?.trim() ?? '', label: rest.join('|').trim() }
-    })
-    .filter((r) => r.targetId !== '')
-}
 
 export default function PaperDetails(): JSX.Element {
   const { papers, selectedPaperId, updatePaper, selectPaper } = usePapers()
@@ -133,13 +116,16 @@ export default function PaperDetails(): JSX.Element {
         placeholder="@article{…}"
       />
 
-      <MarkdownField
-        label="Related Papers"
-        value={relatedToStr(paper.relatedPapers)}
-        onChange={(v) => update({ relatedPapers: strToRelated(v) })}
-        multiline
-        placeholder="ID_002 | Same methodology; …"
-      />
+      <div className="md-field">
+        <span className="md-field-label">Related Papers</span>
+        <RelatedPapersEditor
+          value={paper.relatedPapers}
+          onChange={(related) => update({ relatedPapers: related })}
+          allPapers={papers}
+          excludeId={paper.id}
+          onNavigate={selectPaper}
+        />
+      </div>
 
       {paper.link && (
         <a

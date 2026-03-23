@@ -31,4 +31,5 @@ export interface Filter {
   yearMin: number | null
   yearMax: number | null
   activeTags: string[] | null // null = all tags shown
+  tagFilterMode: 'or' | 'and'
 }

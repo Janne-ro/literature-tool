@@ -57,7 +57,8 @@ export function PaperProvider({ children }: { children: React.ReactNode }): JSX.
   const [filter, setFilterState] = useState<Filter>({
     yearMin: null,
     yearMax: null,
-    activeTags: null
+    activeTags: null,
+    tagFilterMode: 'or'
   })
   const [sidebarOpen, setSidebarOpenState] = useState(true)
   const [tagColorMap, setTagColorMap] = useState<Map<string, string>>(new Map())
@@ -130,8 +131,11 @@ export function PaperProvider({ children }: { children: React.ReactNode }): JSX.
       if (filter.yearMin !== null && !isNaN(year) && year < filter.yearMin) return false
       if (filter.yearMax !== null && !isNaN(year) && year > filter.yearMax) return false
       if (filter.activeTags !== null && filter.activeTags.length > 0) {
-        const hasTag = p.tags.some((t) => filter.activeTags!.includes(t))
-        if (!hasTag) return false
+        const match =
+          filter.tagFilterMode === 'and'
+            ? filter.activeTags.every((t) => p.tags.includes(t))
+            : p.tags.some((t) => filter.activeTags!.includes(t))
+        if (!match) return false
       }
       return true
     })

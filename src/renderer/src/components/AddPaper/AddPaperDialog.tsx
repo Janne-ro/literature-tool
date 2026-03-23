@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { usePapers } from '../../context/PaperContext'
-import { Paper } from '../../types/paper'
+import { Paper, RelatedPaper } from '../../types/paper'
+import RelatedPapersEditor from '../common/RelatedPapersEditor'
 
 interface AddPaperDialogProps {
   onClose: () => void
@@ -16,15 +17,15 @@ const EMPTY_FORM = {
   tags: '',
   directQuotes: '',
   otherInfo: '',
-  bibtex: '',
-  relatedPapers: ''
+  bibtex: ''
 }
 
 type FormData = typeof EMPTY_FORM
 
 export default function AddPaperDialog({ onClose }: AddPaperDialogProps): JSX.Element {
-  const { addPaper, nextId } = usePapers()
+  const { addPaper, nextId, papers } = usePapers()
   const [form, setForm] = useState<FormData>(EMPTY_FORM)
+  const [relatedPapers, setRelatedPapers] = useState<RelatedPaper[]>([])
   const [error, setError] = useState<string>('')
   const newId = nextId()
   const firstInputRef = useRef<HTMLInputElement>(null)
@@ -43,16 +44,6 @@ export default function AddPaperDialog({ onClose }: AddPaperDialogProps): JSX.El
       .split(';')
       .map((x) => x.trim())
       .filter(Boolean)
-  }
-
-  function parseRelated(s: string): { targetId: string; label: string }[] {
-    return s
-      .split(';')
-      .map((x) => {
-        const [id, ...rest] = x.split('|')
-        return { targetId: id?.trim() ?? '', label: rest.join('|').trim() }
-      })
-      .filter((r) => r.targetId !== '')
   }
 
   function handleSubmit(e: React.FormEvent): void {
@@ -74,7 +65,7 @@ export default function AddPaperDialog({ onClose }: AddPaperDialogProps): JSX.El
       directQuotes: parseList(form.directQuotes),
       otherInfo: parseList(form.otherInfo),
       bibtex: form.bibtex.trim(),
-      relatedPapers: parseRelated(form.relatedPapers)
+      relatedPapers
     }
 
     addPaper(paper)
@@ -177,11 +168,11 @@ export default function AddPaperDialog({ onClose }: AddPaperDialogProps): JSX.El
 
             <div className="dialog-field dialog-field--full">
               <label className="dialog-label">Related Papers</label>
-              <input
-                className="dialog-input"
-                value={form.relatedPapers}
-                onChange={(e) => field('relatedPapers', e.target.value)}
-                placeholder="ID_001 | Same methodology; ID_002 | Extends"
+              <RelatedPapersEditor
+                value={relatedPapers}
+                onChange={setRelatedPapers}
+                allPapers={papers}
+                excludeId={newId}
               />
             </div>
 

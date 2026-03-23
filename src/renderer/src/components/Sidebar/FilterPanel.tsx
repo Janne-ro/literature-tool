@@ -71,6 +71,22 @@ export default function FilterPanel(): JSX.Element {
           <div className="filter-section-label">
             Tags
             <span className="filter-tag-actions">
+              <span className="filter-mode-toggle">
+                <button
+                  className={`filter-mode-btn ${filter.tagFilterMode === 'or' ? 'filter-mode-btn--active' : ''}`}
+                  onClick={() => setFilter({ tagFilterMode: 'or' })}
+                  title="Show papers that have ANY of the selected tags"
+                >
+                  OR
+                </button>
+                <button
+                  className={`filter-mode-btn ${filter.tagFilterMode === 'and' ? 'filter-mode-btn--active' : ''}`}
+                  onClick={() => setFilter({ tagFilterMode: 'and' })}
+                  title="Show papers that have ALL of the selected tags"
+                >
+                  AND
+                </button>
+              </span>
               <button className="filter-reset-btn" onClick={selectAllTags}>
                 all
               </button>
