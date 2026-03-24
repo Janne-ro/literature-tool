@@ -28,6 +28,7 @@ interface PaperContextType {
   selectPaper: (id: string | null) => void
   updatePaper: (paper: Paper) => void
   addPaper: (paper: Paper) => void
+  deletePaper: (id: string) => void
   setView: (view: 'map' | 'table') => void
   setLabelMode: (mode: 'title' | 'authors') => void
   setFilter: (filter: Partial<Filter>) => void
@@ -176,6 +177,30 @@ export function PaperProvider({ children }: { children: React.ReactNode }): JSX.
     [papers.length, saveLayout]
   )
 
+  const deletePaper = useCallback(
+    (id: string) => {
+      setPapers((prev) => {
+        const next = prev
+          .filter((p) => p.id !== id)
+          .map((p) => ({
+            ...p,
+            relatedPapers: p.relatedPapers.filter((r) => r.targetId !== id)
+          }))
+        buildColorMap(next)
+        setTagColorMap(getAllTagColors())
+        return next
+      })
+      setLayout((prev) => {
+        const next = { ...prev }
+        delete next[id]
+        saveLayout(next)
+        return next
+      })
+      setSelectedPaperId((prev) => (prev === id ? null : prev))
+    },
+    [saveLayout]
+  )
+
   const setView = useCallback((view: 'map' | 'table') => setActiveView(view), [])
   const setLabelMode = useCallback((mode: 'title' | 'authors') => setLabelModeState(mode), [])
   const setSidebarOpen = useCallback((open: boolean) => setSidebarOpenState(open), [])
@@ -215,6 +240,7 @@ export function PaperProvider({ children }: { children: React.ReactNode }): JSX.
       selectPaper,
       updatePaper,
       addPaper,
+      deletePaper,
       setView,
       setLabelMode,
       setFilter,
@@ -239,6 +265,7 @@ export function PaperProvider({ children }: { children: React.ReactNode }): JSX.
       selectPaper,
       updatePaper,
       addPaper,
+      deletePaper,
       setView,
       setLabelMode,
       setFilter,

@@ -18,13 +18,19 @@ function strToList(s: string): string[] {
 
 
 export default function PaperDetails(): JSX.Element {
-  const { papers, selectedPaperId, updatePaper, selectPaper } = usePapers()
+  const { papers, selectedPaperId, updatePaper, selectPaper, deletePaper } = usePapers()
   const paper = papers.find((p) => p.id === selectedPaperId)
+  const [confirmDelete, setConfirmDelete] = React.useState(false)
 
   if (!paper) return <></>
 
   function update(partial: Partial<Paper>): void {
     updatePaper({ ...paper!, ...partial })
+  }
+
+  function handleDelete(): void {
+    deletePaper(paper!.id)
+    setConfirmDelete(false)
   }
 
   const authorDisplay = formatAuthors(paper.authors)
@@ -33,9 +39,32 @@ export default function PaperDetails(): JSX.Element {
     <div className="paper-details">
       <div className="paper-details-header">
         <div className="paper-details-id">{paper.id}</div>
-        <button className="icon-btn" onClick={() => selectPaper(null)} title="Close">
-          ✕
-        </button>
+        <div className="paper-details-header-actions">
+          {confirmDelete ? (
+            <>
+              <span className="delete-confirm-label">Delete?</span>
+              <button className="icon-btn icon-btn--danger" onClick={handleDelete} title="Confirm delete">
+                ✓
+              </button>
+              <button className="icon-btn" onClick={() => setConfirmDelete(false)} title="Cancel">
+                ✕
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                className="icon-btn icon-btn--danger-soft"
+                onClick={() => setConfirmDelete(true)}
+                title="Delete paper"
+              >
+                🗑
+              </button>
+              <button className="icon-btn" onClick={() => selectPaper(null)} title="Close">
+                ✕
+              </button>
+            </>
+          )}
+        </div>
       </div>
 
       <MarkdownField

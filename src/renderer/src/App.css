@@ -369,6 +369,27 @@ html, body, #root {
   font-family: monospace;
 }
 
+.paper-details-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.delete-confirm-label {
+  font-size: 11px;
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.icon-btn--danger-soft {
+  color: var(--text3);
+  transition: color 0.15s;
+}
+.icon-btn--danger-soft:hover { color: var(--danger); }
+
+.icon-btn--danger { color: var(--danger); }
+.icon-btn--danger:hover { color: #ff8080; }
+
 /* ─── Markdown Field ─────────────────────────────────────── */
 .md-field {
   margin-bottom: 12px;
