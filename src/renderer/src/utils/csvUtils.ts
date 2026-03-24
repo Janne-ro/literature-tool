@@ -49,7 +49,8 @@ function serializeRelatedPapers(related: RelatedPaper[]): string {
 export function parseCsv(csvContent: string): Paper[] {
   const result = Papa.parse<Record<string, string>>(csvContent, {
     header: true,
-    skipEmptyLines: true
+    skipEmptyLines: true,
+    delimiter: '\t'
   })
 
   return result.data
@@ -85,7 +86,7 @@ export function serializeCsv(papers: Paper[]): string {
     'Related papers': serializeRelatedPapers(p.relatedPapers),
     Tags: serializeList(p.tags)
   }))
-  return Papa.unparse(rows, { columns: CSV_COLUMNS })
+  return Papa.unparse(rows, { columns: CSV_COLUMNS, delimiter: '\t' })
 }
 
 export function generateId(papers: Paper[]): string {
