@@ -62,8 +62,8 @@ export function parseCsv(csvContent: string): Paper[] {
       title: row['Title']?.trim() ?? '',
       articleType: row['Article type']?.trim() ?? '',
       venue: row['Venue']?.trim() ?? '',
-      directQuotes: parseList(row['Direct quotes']),
-      otherInfo: parseList(row['Other info']),
+      directQuotes: row['Direct quotes']?.trim() ?? '',
+      otherInfo: row['Other info']?.trim() ?? '',
       bibtex: row['Bibtex citation']?.trim() ?? '',
       relatedPapers: parseRelatedPapers(row['Related papers']),
       tags: parseList(row['Tags'])
@@ -80,8 +80,8 @@ export function serializeCsv(papers: Paper[]): string {
     Title: p.title,
     'Article type': p.articleType,
     Venue: p.venue,
-    'Direct quotes': serializeList(p.directQuotes),
-    'Other info': serializeList(p.otherInfo),
+    'Direct quotes': p.directQuotes,
+    'Other info': p.otherInfo,
     'Bibtex citation': p.bibtex,
     'Related papers': serializeRelatedPapers(p.relatedPapers),
     Tags: serializeList(p.tags)

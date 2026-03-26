@@ -62,8 +62,8 @@ export default function AddPaperDialog({ onClose }: AddPaperDialogProps): JSX.El
       articleType: form.articleType.trim(),
       venue: form.venue.trim(),
       tags: parseList(form.tags),
-      directQuotes: parseList(form.directQuotes),
-      otherInfo: parseList(form.otherInfo),
+      directQuotes: form.directQuotes,
+      otherInfo: form.otherInfo,
       bibtex: form.bibtex.trim(),
       relatedPapers
     }

@@ -122,18 +122,18 @@ export default function PaperDetails(): JSX.Element {
 
       <MarkdownField
         label="Direct Quotes"
-        value={listToStr(paper.directQuotes)}
-        onChange={(v) => update({ directQuotes: strToList(v) })}
+        value={paper.directQuotes}
+        onChange={(v) => update({ directQuotes: v })}
         multiline
-        placeholder="Quote1; Quote2; …"
+        placeholder="Write markdown here — bullet points, bold, etc."
       />
 
       <MarkdownField
         label="Other Info"
-        value={listToStr(paper.otherInfo)}
-        onChange={(v) => update({ otherInfo: strToList(v) })}
+        value={paper.otherInfo}
+        onChange={(v) => update({ otherInfo: v })}
         multiline
-        placeholder="Additional notes…"
+        placeholder="Additional notes in markdown…"
       />
 
       <MarkdownField

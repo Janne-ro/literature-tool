@@ -6,8 +6,8 @@ export interface Paper {
   title: string
   articleType: string
   venue: string
-  directQuotes: string[]
-  otherInfo: string[]
+  directQuotes: string
+  otherInfo: string
   bibtex: string
   relatedPapers: RelatedPaper[]
   tags: string[]

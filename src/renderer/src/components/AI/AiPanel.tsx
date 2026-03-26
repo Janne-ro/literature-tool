@@ -55,14 +55,8 @@ function truncate(s: string, max: number): string {
 }
 
 function buildPaperBlock(paper: Paper): string {
-  const quotes = paper.directQuotes
-    .filter(Boolean)
-    .map((q) => truncate(q, QUOTE_MAX))
-    .join(' | ')
-  const notes = paper.otherInfo
-    .filter(Boolean)
-    .map((n) => truncate(n, NOTE_MAX))
-    .join(' | ')
+  const quotes = truncate(paper.directQuotes.trim(), QUOTE_MAX)
+  const notes = truncate(paper.otherInfo.trim(), NOTE_MAX)
 
   let block = `[${paper.id}] "${paper.title}"`
   if (quotes) block += `\n  Quotes: ${quotes}`
