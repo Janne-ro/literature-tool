@@ -10,7 +10,17 @@ const PALETTE = [
   '#20c9a6', // teal
   '#ff9f43', // golden
   '#a29bfe', // lavender
-  '#fd79a8'  // rose
+  '#fd79a8', // rose
+  '#6bcb77', // lime green
+  '#4d96ff', // sky blue
+  '#ff6b6b', // coral
+  '#c77dff', // violet
+  '#48cae4', // ice blue
+  '#f77f00', // amber
+  '#06d6a0', // mint
+  '#e63946', // crimson
+  '#74b3ce', // steel blue
+  '#f4a261'  // peach
 ]
 
 // Stable mapping from tag → color, built once from the full paper set

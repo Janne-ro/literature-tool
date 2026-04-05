@@ -72,12 +72,8 @@ export default function AddPaperDialog({ onClose }: AddPaperDialogProps): JSX.El
     onClose()
   }
 
-  function handleBackdropClick(e: React.MouseEvent): void {
-    if (e.target === e.currentTarget) onClose()
-  }
-
   return (
-    <div className="dialog-backdrop" onClick={handleBackdropClick}>
+    <div className="dialog-backdrop">
       <div className="dialog" role="dialog" aria-modal="true">
         <div className="dialog-header">
           <div>
