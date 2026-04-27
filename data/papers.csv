@@ -29,7 +29,7 @@ ID_004	https://www.mdpi.com/2075-4698/15/1/6	Michael Gerlich	2026	AI Tools in So
 ID_005	https://www.sciencedirect.com/science/article/abs/pii/B9780121098902500317	Barry Zimmermann	2000	Attaining Self-Regulation: A Social Cognitive Perspective	Book Chapter	Handbook of Self-Regulation		"* **Zimmerman's Self-Regulated Learning (SRL) Model** explains how learners actively control their own learning through a cyclical process. It emphasizes metacognition, motivation, and behavior.
 * **1. Forethought Phase (Before Learning)**: Focuses on planning and motivation. Learners set goals, plan strategies, and develop self-motivation beliefs (e.g., self-efficacy, outcome expectations, intrinsic interest, goal orientation). Key processes: goal setting, strategic planning, self-motivation.
 * **2. Performance Phase (During Learning)**: Focuses on strategy use and self-control. Learners implement strategies, monitor progress, and manage attention and effort. Key processes: attention focusing, task strategies, self-instruction, monitoring.
-* **3. Self-Reflection Phase (After Learning)**: Focuses on evaluating performance. Learners judge progress against goals, attribute causes of success/failure, and develop adaptive reactions. Key processes: self-evaluation, causal attribution, self-satisfaction, adaptive/defensive responses.;* **Core Idea**: Zimmerman's model is **cyclical**: reflection influences future forethought, meaning learners refine goals and strategies based on past experiences."	@incollection{zimmerman2000attaining, title={Attaining self-regulation: A social cognitive perspective}, author={Zimmerman, Barry J}, booktitle={Handbook of self-regulation}, pages={13--39}, year={2000}, publisher={Elsevier}}	ID_009 | Closly tied to metacognition;ID_027 | Heavily draws on scaffolding	Self-regulated learning;Framework;Foundational Paper;Main Paper
+* **3. Self-Reflection Phase (After Learning)**: Focuses on evaluating performance. Learners judge progress against goals, attribute causes of success/failure, and develop adaptive reactions. Key processes: self-evaluation, causal attribution, self-satisfaction, adaptive/defensive responses.;* **Core Idea**: Zimmerman's model is **cyclical**: reflection influences future forethought, meaning learners refine goals and strategies based on past experiences."	@incollection{zimmerman2000attaining, title={Attaining self-regulation: A social cognitive perspective}, author={Zimmerman, Barry J}, booktitle={Handbook of self-regulation}, pages={13--39}, year={2000}, publisher={Elsevier}}	"ID_009 | Closly tied to metacognition;ID_027 | Heavily draws on scaffolding;ID_054 | Connects SRL and AI Literacy;ID_055 | Survey;common measurments + future research directions | "	Self-regulated learning;Framework;Foundational Paper;Main Paper
 ID_006	https://educationendowmentfoundation.org.uk/education-evidence/teaching-learning-toolkit	Education Endowment Foundation	2026	Teaching and Learning Toolkit	Website			"* Guide that for different educational interventions details how much they cost and how much evidence there is that they are effective
 * Cites 'Metacognition and self-regulation"" as very low cost and extremly beneficial"	"@misc{EEF2024toolkit,
   author       = {{Education Endowment Foundation}},
@@ -49,7 +49,7 @@ ID_007	https://pmc.ncbi.nlm.nih.gov/articles/PMC7298225/#:~:text=Metacognition%2
   year={2020},
   publisher={Elsevier},
   doi={10.5688/ajpe7730}
-}"		Metacongition - Measuring;Metacognition
+}"	ID_057 | Neg surveys, unrelated survey and online measures;ID_058 | Knowledge, Regulation not correlated to behaviour	Metacognition - Measurement;Metacognition
 ID_008	https://arxiv.org/html/2509.03171v1	Tung Phung;Heeryung Choi;Mengyan Wu;Adish Singla;Christopher Brooks	2026	Plan More, Debug Less: Applying Metacognitive Theory to AI-Assisted Programming Education	Conference Paper	International Conference on Artificial Intelligence in Education	"* **Existing studies** often focus on technical correctness [8] or student preference [2, 9] and **overlook the importance of grounding AI-generated feedback in [programing education] well-established pedagogical theories**, potentially limiting the effectiveness of such feedback in student learning.
 *  This study investigates the **potential of metacognitive theory to inform AI-assisted programming education through a hint system** designed around the metacognitive phases of planning, monitoring, and evaluation. Upon request, the system can provide three types of AI-generated hints–planning, debugging, and optimization–to guide students at different stages of problem-solving
 * we find that **students perceive and engage with planning hints most highly**, whereas optimization hints are rarely requested. We observe a consistent association between requesting planning hints and achieving higher grades across question difficulty and student competency. --> Importannce of planing!
@@ -88,7 +88,7 @@ approaches to direct learning."	"@article{Flavell1979metacognition,
   number    = {10},
   pages     = {906--911},
   doi       = {10.1037/0003-066X.34.10.906}
-}"	ID_027 | Heavily draws on scaffolding	Metacognition;Main Paper;Metacognition
+}"	ID_027 | Heavily draws on scaffolding	Metacognition - Framework;Main Paper;Metacognition
 ID_010	https://link.springer.com/article/10.1007/s10956-010-9218-7	Sharon L. Oviatt;Adrienne O. Cohen	2010	Toward High-Performance Communications Interfaces for Science Problem Solving	Article	Journal of Science Education and Technology	"* RQ: What **type of interface input capabilities** provide best support for science problem solving in both low- and high-performing students?
 * **High school students’** ability to solve a diverse range of **biology problems** was compared over longitudinal sessions while they used: (1) hardcopy paper and pencil (2) a digital paper and pen interface (3) pen tablet interface, and (4) graphical tablet interface
 * time to solve problems, meta-cognitive control, solution correctness, and memory all were significantly enhanced when using the **digital pen and paper interface**
@@ -226,7 +226,7 @@ ID_019	file:///C:/Users/Janne/Downloads/Paper5,529-535.pdf	Mohsen Mahdavi	2014	A
   number={3},
   pages={529--535},
   year={2014}
-}"	ID_009 | Explains subaxis in more detail;ID_044 | Talks about NFCC (moderats metacongition with AI)	Metacognition - Framework;Metacognition
+}"	ID_009 | Explains subaxis in more detail;ID_044 | Talks about NFCC (moderats metacongition with AI);ID_066 | Cite when differentiating knowledge/regulation	Metacognition - Framework;Metacognition
 ID_020	https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11208815&casa_token=ADwJKl141kAAAAAA:I_GFifsZnip_mwXBnzfEL3tOB0iSFLG0TAODhxxhJfVt0qU-Vy26t0dgfVon4doXYrW9eR3-Sb4&tag=1	Steffen Holter;Caterina Moruzzi;Mennatallah El-Assady	2025	Toward Agency in Human–AI Collaboration	Article	IEEE Computer Graphics and Applications	"* [introduces] **design space for reasoning about agency in human–AI collaboration**
 * also defines agency (gives two definitions)
 * works theortical thorugh lit review and expert interviews
@@ -239,7 +239,7 @@ ID_020	https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11208815&casa_token=
   journal={IEEE Computer Graphics and Applications},
   year={2025},
   publisher={IEEE}
-}"		Agency;El-Assady
+}"		Agency;El-Assady;Design
 ID_021	https://arxiv.org/pdf/2603.19634	Anjali Singh;Karan Taneja;Zhitong Guan;Soo Young Rieh	2026	MetaCues: Enabling Critical Engagement with Generative AI for Information Seeking and Sensemaking	Preprint	-	"* **GenAI search tools** are increasingly used for information seeking, yet their design tends to encourage cognitive offloading, which may lead to passive engagement, selective attention --> **Effective use requires metacognitive engagement to craft good prompts**, verify AI outputs, and critically engage with information
 * **developed MetaCues, a GenAI-based interactive tool for information seeking** that delivers **metacognitive cues** alongside AI responses and a **notetaking interface** to guide users’ search and associated learning
 * online study (𝑁 = 146)
@@ -289,7 +289,7 @@ ID_023	https://www.nature.com/articles/s41598-025-19118-z.pdf	Yue Zhai;Behzad Ne
   year={2025},
   publisher={Nature Publishing Group UK London},
   doi={10.1038/s41598-025-19118-z}
-}"	"ID_028 | intersection  of GenAI effects and metacognition;ID_030 | Connects to pos and neg effects of GenAI;ID_049 | Connects GenAI neg to Bloom;ID_051 | Importance of wheter learners choose to use AI "	GenAI - Effects on Learning;Empirical
+}"	ID_028 | intersection  of GenAI effects and metacognition;ID_030 | Connects to pos and neg effects of GenAI;ID_049 | Connects GenAI neg to Bloom;ID_051 | Importance of wheter learners choose to use AI;ID_065 | Supports	GenAI - Effects on Learning;Empirical
 ID_024	https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2025.1528603/full	Hoda Fakour;Moslem Imani	2025	Socratic wisdom in the age of AI: a comparative study of ChatGPT and human tutors in enhancing critical thinking skills	Article	Frontiers in Education	"* investigates the perceptual **differences between ChatGPT and human tutors in fostering critical thinking** among students, highlighting the **effectiveness of Socratic tutoring methodologies** in modern educational contexts
 * findings **underscore the importance of developing hybrid educational models that leverage both the strengths of human facilitators and the efficiencies of AI tools** to enhance student learning and critical thinking skills
 * significant portion of **students appreciates the benefits of ChatGPT—namely its non-judgmental nature and accessibility** — **human tutors** are acknowledged for their **capability to provide tailored feedback and emotional support**
@@ -479,7 +479,7 @@ ID_037	https://link.springer.com/content/pdf/10.1007/s40593-014-0023-y.pdf	Ivon 
   year={2014},
   publisher={Springer},
   doi={10.1007/s40593-014-0023-y}
-}"	"ID_040 | DIRECTLY CONTRASTS;also pre-GenAI | "	Metacognition - Intervention;Metacognition - Importance;Metacognition;Empirical
+}"	ID_040 | DIRECTLY CONTRASTS;ID_060 | DIRECTLY CONTRASTS	Metacognition - Intervention;Metacognition - Importance;Metacognition;Empirical
 ID_038	https://www.sciencedirect.com/science/article/pii/S0959475210000538?casa_token=on1PU77vsREAAAAA:-cwXAYN-YbDP-8YPaY-RI5VLiLf26VVLPNd9WruDAnIguA58MSErzv_ue7aUSSfyIn7RL5XNVQ	Ido Roll;Vincent Aleven;Bruce M. McLaren;Kenneth R. Koedinger	2011	Improving students’ help-seeking skills using metacognitive feedback in an intelligent tutoring system	Article	Learning and Instruction	"* investigated **whether immediate metacognitive feedback on students’ help-seeking errors can help students acquire better help-seeking skills**
 * developed Geometry Cognitive Tutor
 * improved **help-seeking skills transferred to learning new domain-level content during the month following the intervention**, while the help-seeking support was no longer in effect --> **good to cite for fading effect !!!**
@@ -494,7 +494,7 @@ ID_038	https://www.sciencedirect.com/science/article/pii/S0959475210000538?casa_
   year={2011},
   publisher={Elsevier},
   doi={10.1016/j.learninstruc.2010.07.004}
-}"	ID_011 | Also pre-GenAI;ID_037 | Also pre-GenAI;ID_039 | Also pre-GenAI but ITS;ID_040 | DIRECTLY CONTRASTS	Metacognition - Intervention;High school;Empirical;Metacognition
+}"	ID_011 | Also pre-GenAI;ID_037 | Also pre-GenAI;ID_039 | Also pre-GenAI but ITS;ID_040 | DIRECTLY CONTRASTS;ID_060 | DIRECTLY CONTRASTS	Metacognition - Intervention;High school;Empirical;Metacognition
 ID_039	https://scholar.google.de/scholar?hl=en&as_sdt=0%2C5&q=Lessons+learned+and+future+directions+of+MetaTutor%3A+Leveraging+multichannel+data+to+scaffold+self-regulated+learning+with+an+intelligent+tutoring+system&btnG=	Roger Azevedo;François Bouchet;Melissa Duffy;Jason Harley;Michelle Taub;Gregory Trevors;Elizabeth Cloude;Daryn Dever;Megan Wiedbusch;Franz Wortha;Rebeca Cerezo	2022	Lessons learned and future directions of MetaTutor: Leveraging multichannel data to scaffold self-regulated learning with an intelligent tutoring system	Article	Frontiers in Psychology	"* This paper presents an overview of over 10 years of research on SRL with MetaTutor, a hypermedia-based **ITS designed to scaffold college students’ SRL** while they learn about the human circulatory system
 * data visualizations of students’ multimodal SRL processes are key to enhancing their understanding of SRL
 * **learners with different motivational profiles are likely to perceive and react to prompts and feedback differently** --> Connects to self-determination theory [and calls for indivdiualization which could be done easily via llms]
@@ -526,7 +526,7 @@ comprehension strategy ITS** with 116 participants [US high-school]
   year={2018},
   publisher={Springer},
   doi={10.1007/s40593-018-0164-5}
-}"		Metacognition - Intervention;Metacognition - Importance;Metacognition;Empirical
+}"	ID_060 | Both found no effect	Metacognition - Intervention;Metacognition - Importance;Metacognition;Empirical
 ID_041	https://psycnet.apa.org/manuscript/2019-26066-001.pdf	Doug Rohrer;Robert F. Dedrick;Marissa K. Hartwig;Chi-Ngai Cheung	2020	A Randomized Controlled Trial of Interleaved Mathematics Practice	Article	Journal of Educational Psychology	"*an **interleaved assignment** is arranged so that no two consecutive problems require the same strategy (**Definition**)
 * Previous small-scale studies found that practice **assignments with a greater proportion of interleaved practice produced higher test scores**
 * **54 seventh-grade mathematics classes** [yes classes, not schools] periodically completed interleaved or blocked assignments over a period of four months, and then both groups completed an interleaved review assignment. One month later, students took an unannounced test, and **the interleaved group outscored the blocked group [on task performance]**"		"@article{rohrer2020randomized,
@@ -558,7 +558,7 @@ ID_043	https://arxiv.org/pdf/2601.20245	Judy Hanwen Shen;Alex Tamkin	2026	How AI
   author={Shen, Judy Hanwen and Tamkin, Alex},
   journal={arXiv preprint arXiv:2601.20245},
   year={2026}
-}"	ID_021 | Talk about negative effects in CS (for novices);ID_008 | Both about CS	AI - Negative Impact;CS Education;Empirical;GenAI;GenAI - Effects on Learning
+}"	ID_021 | Talk about negative effects in CS (for novices);ID_008 | Both about CS;ID_064 | Without AI, primary school	AI - Negative Impact;CS Education;Empirical;GenAI;GenAI - Effects on Learning
 ID_044	https://www.sciencedirect.com/science/article/pii/S0360131525001903?casa_token=uU_mdAG9lmMAAAAA:luK2rm6HdHuUtDM-vXRmoOLFdXm010b4ipLwADY9PqZeVCLlUGZpZycKPA2AW8y2SXgZBxWw8BY	Zhongmei Han;Ruyi Ying;Changqin Huang;Chin-Chung Tsai;Xinghua Wang;Tao He	2025	Identifying students’ metacognition patterns by their needs for cognitive closure in human-GenAI collaboration	Article	Computers & Education	"* **Need for Cognitive Closure (NFCC)**:  a desire for certainty and an aversion to ambiguity, regulates how students engage with GenAI and their metacognitive processes
 * A **three-week intervention was conducted with 82 undergraduates++, assigned to 16 groups (5–6 students each), completing three cognitively demanding tasks with GenAI support
 * **NFCC influences how students engage with AI** --> High NFCC: Fast, goal-driven strategys, Low NFCC: more reflective and deep engagement in metacognitive processing
@@ -587,7 +587,7 @@ ID_045	https://link.springer.com/article/10.1007/s11257-016-9186-6	Yanjin Long;V
   year={2017},
   publisher={Springer},
   doi={doi.org/10.1007/s11257-016-9186-6}
-}"	ID_005 | Talks about OLMs as method for SRL	Self-regulated learning;Empirical
+}"	ID_005 | Talks about OLMs as method for SRL;ID_061 | Investigates SRL via OLM and gamification	Self-regulated learning;OLM;Empirical
 ID_046	https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4884604	Maria De-Arteaga;Kenneth Holstein	2026	Improving Human-Machine Augmentation via Metaknowledge of Unobservables	Paper in progress	-	"* **Decision-makers often lack metaknowledge** in practice
 * The value added by ML recommendations is reduced in the absence of metaknowledge of unobservables
 * empirically examine its effects in an online behavioral experiment, showing that **metaknowledge of unobservables can enhance human-machine performance by shaping how individuals use different sources of information**, but realizing this potential is nontrivial and depends on how such knowledge is conveyed
@@ -602,7 +602,7 @@ ID_046	https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4884604	Maria De-Arte
   howpublished = {SSRN},
   note         = {Available at SSRN: \url{https://ssrn.com/abstract=4884604}},
   doi          = {10.2139/ssrn.4884604}
-}"		Complementarity;Ken
+}"	ID_053 | Tangengly: On participartory students setting own rules;ID_059 | Tangengly: On communiy bots	Complementarity;Ken
 ID_047	https://asistdl.onlinelibrary.wiley.com/doi/abs/10.1002/pra2.1287?casa_token=yyVs3_H7ox4AAAAA%3AnndeTCc3xjFJI_OtGZdmLf86cHDBzVuc1jBci39lLGXcfx43erI3BXvaHwowICmFt1-kfBBPpm50i5w7	Anjali Singh;Zhitong Guan;Soo Young Rieh	2025	Enhancing Critical Thinking in Generative AI Search with Metacognitive Prompts	Article	Proceedings of the Association for Information Science and Technology	"* As people **increasingly rely on GenAI** to perform tasks such as analyzing and applying information, **they may become less actively engaged in thinking and learning**
 * This study **examines whether metacognitive prompts**—designed to encourage people to pause, reflect, assess their understanding, and consider multiple perspectives—**can support critical thinking during GenAI-based search**
 * User study with **n=40 uni students**: between-subjects design using surveys and retrospective think-aloud interviews to examine the impact of metacognitive prompts (hereafter referred to as “cues”) on students' critical thinking and search behaviors while searching with the GenAI tool, Perplexity
@@ -644,7 +644,7 @@ ID_049	https://arxiv.org/pdf/2502.12447	Anjali Singh;Karan Taneja;Zhitong Guan;A
   year={2025}
 }"	ID_050 | Aruges neg effect with Bloom	GenAI - Effects on Learning;Theoretical
 ID_050	https://eduq.info/xmlui/handle/11515/18824	Lorin W. Anderson;David R. Krathwohl;Peter Airasian;Kathleen Cruikshank;Richard Mayer;Paul Pintrich;Merlin Wittrock	2001	A taxonomy for learning, teaching, and assessing: A revision of Bloom's taxonomy of educational objectives: complete edition	Book		"* Original: Bloom, B. S., Engelhart, M. D., Furst, E. J., Hill, W. H., & Krathwohl, D. R. (1964). Taxonomy of educational objectives (Vol. 2). New York: Longmans, Green.
-* But this version here is more often cited is the revivesed version which make it more action-oriented and two-dimensional (reworded as verbs, added knowledge dimension) "	"The revised Bloom’s Taxonomy (Anderson & Krathwohl, 2001) rewords the cognitive levels as action-oriented verbs and pairs them with a knowledge dimension (Factual, Conceptual, Procedural, Metacognitive), so objectives read like [cognitive process] + [type of knowledge].
+* But this version here is more often cited is the revivesed version which make it more action-oriented and two-dimensional (reworded as verbs, added knowledge dimension)"	"The revised Bloom’s Taxonomy (Anderson & Krathwohl, 2001) rewords the cognitive levels as action-oriented verbs and pairs them with a knowledge dimension (Factual, Conceptual, Procedural, Metacognitive), so objectives read like [cognitive process] + [type of knowledge].
 
 The six cognitive process levels (brief) + one example each
 
@@ -673,8 +673,7 @@ Example: Design an app that helps users track and reduce their carbon footprint.
 ID_051	https://arxiv.org/pdf/2506.17006	Danielle R. Thomas;Conrad Borchers;Shambhavi Bhushan;Erin Gatz;Shivang Gupta;Kenneth R. Koedinger	2025	LLM-Generated Feedback Supports Learning if Learners Choose to Use it	Conference Paper	European Conference on Technology Enhanced Learning	"*   **Analyzing over 2,600 lesson completions from 885 TUTOR learners** (so it was specifically for how a form of educators learn with GenAI), we compare posttest performance among learners across three groups: learners who received feedback generated by gpt-3.5-turbo, those who declined it, and those without access
 * Learners with a higher predicted likelihood of engaging with LLM feedback scored significantly higher at posttest than those with lower [likelihood] --> **Small Learning Gains from LLM-generated Feedback, Moderated by Learners’ Tendency to Seek Support**
 * **[results] suggest that the effectiveness of LLM feedback depends on the learners’ tendency to seek support**
-* LLM feedback **did not significantly increase completion time**, and learners overwhelmingly rated it as helpful
-"		"@inproceedings{thomas2025llm,
+* LLM feedback **did not significantly increase completion time**, and learners overwhelmingly rated it as helpful"		"@inproceedings{thomas2025llm,
   title={Llm-generated feedback supports learning if learners choose to use it},
   author={Thomas, Danielle R and Borchers, Conrad and Bhushan, Shambhavi and Gatz, Erin and Gupta, Shivang and Koedinger, Kenneth R},
   booktitle={European Conference on Technology Enhanced Learning},
@@ -715,10 +714,225 @@ ID_052	https://arxiv.org/pdf/2306.10052	Ethan Mollick;Lilach Mollick	2023	Assign
 **AI as Teammate: Increasing Collaborative Intelligence**
 * Description: e.g. act as devils advocate
 * Upsides: Provide feeling of teammate, up collaborative intelligence
-* Downsides: AI can confabulate or make up facts that may lead teams to the wrong decision, students who begin to think of the AI as a teammate may not challenge its opinions or advice "	"* Great to cite when talking about specific prompts used or usage strategys in schools "	"@article{mollick2023assigning,
+* Downsides: AI can confabulate or make up facts that may lead teams to the wrong decision, students who begin to think of the AI as a teammate may not challenge its opinions or advice"	* Great to cite when talking about specific prompts used or usage strategys in schools	"@article{mollick2023assigning,
   author  = {Mollick, Ethan R. and Mollick, Lilach},
   title   = {Assigning {AI}: Seven Approaches for Students, with Prompts},
   journal = {SSRN Electronic Journal},
   year    = {2023},
   doi     = {10.2139/ssrn.4475995}
 }"		Scaffolding;GenAI - Effects on Learning
+ID_053	https://dl.acm.org/doi/pdf/10.1145/3706598.3713865	Tzu-Sheng Kuo;Quan Ze Chen;Amy X. Zhang;Jane Hsieh;Haiyi Zhu;Kenneth Holstein	2025	PolicyCraft: Supporting Collaborative and Participatory Policy Design through Case-Grounded Deliberation	Conference Paper	Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems	"* **PolicyCraft** (the developed framework) **supports users in collaboratively proposing, critiquing, and revising policies through discussion and voting on cases** (basically students setting their own rules) 
+* students using PolicyCraft **reached greater consensus and developed better-supported course policies**, compared with those using a baseline system that did not scaffold their use of concrete cases
+* Mechanisms for engagement: Users can critique a policy by creating cases that highlight ambiguities or potential flaws; PolicyCraft highlights misalignments between case labels and users’ votes, ... much more but mostly resolving around cases"	"* PolicyCraft"" project where we experimented with having university students co-design course policies for GenAI use, after receiving a primer on course-specific learning goals and summaries of what is known from research about impacts of AI on learning"	"@inproceedings{kuo2025policycraft,
+  title={PolicyCraft: Supporting Collaborative and Participatory Policy Design through Case-Grounded Deliberation},
+  author={Kuo, Tzu-Sheng and Chen, Quan Ze and Zhang, Amy X and Hsieh, Jane and Zhu, Haiyi and Holstein, Kenneth},
+  booktitle={Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems},
+  pages={1--24},
+  year={2025},
+  doi={10.1145/3706598.3713865}
+}"	ID_020 | Citable for design	Complementarity;Ken;Empirical;Design
+ID_054	https://www.mdpi.com/2076-328X/15/5/705	Jiajia Shi;Weitong Liu;Ke Hu	2025	Exploring How AI Literacy and Self-Regulated Learning Relate to Student Writing Performance and Well-Being in Generative AI-Supported Higher Education	Article	Behavioural Science	"* survey was administered to 257 students from universities in China
+* Results show that **both AI literacy and SRL significantly and positively predict students’ writing performance, with SRL having a stronger effect**
+* **AI literacy shows a positive association with GAI-driven well-being**
+* findings suggest that **fostering both technological competencies and effective learning strategies may support students’ academic outcomes**"	* integrating AI literacy and SRL into a unified model	"@article{shi2025exploring,
+  title={Exploring how AI literacy and self-regulated learning relate to student writing performance and well-being in generative AI-supported higher education},
+  author={Shi, Jiajia and Liu, Weitong and Hu, Ke},
+  journal={Behavioral Sciences},
+  volume={15},
+  number={5},
+  pages={705},
+  year={2025},
+  publisher={MDPI},
+  doi={10.3390/bs15050705}
+}"		Self-regulated learning;Empirical;AI Literacy
+ID_055	https://www.sciencedirect.com/science/article/pii/S0360131525002337?casa_token=VRH9cdIW7NsAAAAA:L43lx8vVrTZgfYrglDCXS_pWyr1Z9_uGkN_ISq-OOsblYEvD1WmVnJmFl-5mr6uslXuoEy7ZFqk	Qi Xia;Qian Liu;Ahmed Tlili;Thomas K.F. Chiu	2025	A systematic literature review on designing self-regulated learning using generative artificial intelligence and its future research directions	Article	Computers & Education	"* popular student learning activities using GenAI in each phase are **information searching in the forethought**; **strategies for problem-solving in the performance**, and **obtaining feedback and conducting self-assessments in the self-reflection**
+
+Identifies what influences the impact of SRL in GenAI environments:
+* **Individual**: self-efficacy, perceived autonomy, perceived competence, perceived relatedness, interest, intrinsic motivation, and strategy use
+* **Environmental**: technical support, teacher support, and peer support
+
+**Future research directions**:
+* More research on **student SRL activities using GenAI**
+* More research on **environmental dimensions**"	* also develops  taxonomy of six pedagogical affordances from GenAI	"@article{qi2025systematic,
+  title={A systematic literature review on designing self-regulated learning using generative artificial intelligence and its future research directions},
+  author={Qi, XIA and Liu, Qian and Tlili, Ahmed and Thomas, KF},
+  journal={Computers \& education},
+  pages={105465},
+  year={2025},
+  publisher={Elsevier},
+  doi={10.1016/j.compedu.2025.105465},
+  volume={240}
+}"	ID_056 | How so students commonly use GenAI	Self-regulated learning;Survey
+ID_056	https://learningletters.org/index.php/learn/article/view/60	Olga Viberg;Yael Feldman-Maggor;Jacqueline Wong	2026	Efficiency vs. Effectiveness Self-regulated learning with LLM-mediated help-seeking	Article	Learning Letters	"* **20 STEM students** at a large Swedish university were interviewed about their use of commercial LLM  chatbots (so selfreported, and low sample size)
+* usually LLMs are used to complement rather than replace human support
+* **students  described  a  four-stage  process** (integrated with SRL):  **(1)  deciding  whether  help  is  needed**, typically by attempting  problems  independently  first;  **(2)  choosing  a  source  and  using ChatGPT as a low-barrier first step**, then peers for conceptual negotiation, and instructors for complex or high-stakes issues; **(3) determining the type of help**, from seeking hints and explanations  to  scaffolding  problem-solving,  streamlining  routine  work,  and  extending learning; and** (4) judging the help by exercising selective trust, verifying AI outputs** against coursework or with humans, and reserving human support for nuanced understanding and affective  needs
+* academic  help-seeking  is layeredand context-dependent:  **LLMs  were  generally  preferred  for  simple,  well-defined tasks** such as debugging or syntax checking, **while peers and instructors were sought for more  complex  conceptual  challenges  and  affective  support**."		"@article{viberg2026efficiency,
+  author  = {Viberg, Olga and Feldman-Maggor, Yael and Wong, Jane},
+  title   = {Efficiency vs. Effectiveness: Self-Regulated Learning with {LLM}-Mediated Help-Seeking},
+  journal = {Learning Letters},
+  year    = {2026},
+  volume  = {8},
+  pages   = {Article 60},
+  doi     = {10.20851/ll.v8.60}
+}"		Self-regulated learning;Empirical
+ID_057	https://link.springer.com/content/pdf/10.3758/s13428-025-02621-6.pdf	Kit S. Double	2025	Survey measures of metacognitive monitoring are often false	Article	Behavior Research Methods	"* 273 prolific participants
+* high self-perceptions of monitoring ability were, in fact, related to higher confidence and lower cognitive performance
+* **we** may **have inaccurate insights into our own metacognitive monitoring capacity** and **questionnaire-based measures of metacognitive abilities may be problematic as they may represent unrealistic self-perceptions**"	* Survey-based measures and online measures of metacognition (e.g. think aloud) are not corrleated (almost negativly correlated)	"@article{double2025survey,
+  title={Survey measures of metacognitive monitoring are often false},
+  author={Double, Kit S},
+  journal={Behavior Research Methods},
+  volume={57},
+  number={3},
+  pages={97},
+  year={2025},
+  publisher={Springer}
+}"	ID_058 | Both critique self-assesments	Metacognition - Measurement;Metacognition;Empirical
+ID_058	https://link.springer.com/content/pdf/10.1007/s11409-020-09222-y.pdf	Kym Craig;Daniel Hale;Catherine Grainger;Mary E. Stewart	2020	Evaluating metacognitive self-reports: systematic reviews of the value of self-report in metacognitive research	Article	Metacognition and Learning	"* This study reviews and critiques the use of self-report in evaluating metacognition by conducting systematic reviews and a meta-analysis of studies assessing metacognitive skill
+* **the two factors of metacognition [knowledge and regulation] do not adequately relate to metacognitive behavior**"		"@article{craig2020evaluating,
+  title={Evaluating metacognitive self-reports: systematic reviews of the value of self-report in metacognitive research},
+  author={Craig, Kym and Hale, Daniel and Grainger, Catherine and Stewart, Mary E},
+  journal={Metacognition and Learning},
+  volume={15},
+  number={2},
+  pages={155--213},
+  year={2020},
+  publisher={Springer},
+  doi={10.1007/s11409-020-09222-y}
+}"		Metacognition - Measurement;Metacognition;Survey
+ID_059	https://arxiv.org/pdf/2509.25492	Tzu-Sheng Kuo;Sophia Liu;Quan Ze Chen;Joseph Seering;Amy X. Zhang;Haiyi Zhu;Kenneth Holstein	2026	Botender: Supporting Communities in Collaboratively Designing AI Agents through Case-Based Provocations	Preprint	ArXiv	"* **How might communities collectively shape the behavior of community bots?**
+* We present Botender, a system that enables communities to collaboratively design LLM-powered bots without coding.
+* Botender facilitates testing and iteration on bot behavior through case-based provocations: interaction scenarios generated to spark user reflection and discussion around desirable bot behavior"	* Propse change --> Iterate on change (i.e. collaborativly change bot system prompts) --> vote and deploy	"@article{kuo2025botender,
+  title={Botender: Supporting Communities in Collaboratively Designing AI Agents through Case-Based Provocations},
+  author={Kuo, Tzu-Sheng and Liu, Sophia and Chen, Quan Ze and Seering, Joseph and Zhang, Amy X and Zhu, Haiyi and Holstein, Kenneth},
+  journal={arXiv preprint arXiv:2509.25492},
+  year={2025}
+}"	ID_053 | Same main author (Kens PhD)	Complementarity;Design;Ken
+ID_060	https://files.eric.ed.gov/fulltext/ED577122.pdf	Kathryn S. McCarthy;Matthew E. Jacovina;Erica L. Snow;Tricia A. Guerrero;Danielle S. McNamara	2017	iSTART Therefore I Understand: But Metacognitive Supports Did Not Enhance Comprehension Gains	Conference paper	Proceedings of the 18th International Conference on Artificial Intelligence in Education	"* **iSTART is an [gamified] intelligent tutoring system designed to provide self-explanation instruction**
+*  **iSTART teaches five self-explanation strategies** through video lessons, demonstration, and game-based practice
+* **High school students (n = 234)** were either assigned to an iSTART treatment condition or a control condition. Within the iSTART condition, students were assigned to a 2x2 design in which students provided self-assessments of their performance or were transferred to Coached Practice if their performance did not reach a certain performance threshold
+* High school students were assigned to either a control condition with no training (n
+= 116) or an iSTART training condition (n = 118). Within the iSTART condition, we
+employed a 2 (performance threshold: off, on) x 2 (self-assessment: off, on) between-
+subjects design (these are the metacognitive scaffolds employed)
+* Those receiving **iSTART training produced higher self-explanation and inference-based comprehension scores**. However, there were **no direct effects of either metacognitive support on these learning outcomes**"		"@inproceedings{mccarthy2017istart,
+  title={iSTART therefore I understand: But metacognitive supports did not enhance comprehension gains},
+  author={McCarthy, Kathryn S and Jacovina, Matthew E and Snow, Erica L and Guerrero, Tricia A and McNamara, Danielle S},
+  booktitle={International Conference on Artificial Intelligence in Education},
+  pages={201--211},
+  year={2017},
+  organization={Springer}
+}"		Metacognition - Intervention;Metacognition;Empirical;Secondary Education;Gamificiation
+ID_061	https://link.springer.com/article/10.1007/s10639-023-11906-2#Abs1	Fabrício Domingos Ferreira da Rocha;Bruno Lemos;Pedro Henrique de Brito;Rodrigo Santos;Luiz Rodrigues;Seiji Isotani;Diego Dermeval	2024	Gamification and open learner model: An experimental study on the effects on self-regulatory learning characteristics	Article	Education and Information Technologies	"* adding **Open Learner Models (OLM) to learning environments encourages self-regulation by providing clear feedback** on which skills students need to prioritize
+* **gamifying** these environments **holds the potential to maximize student motivation**
+* conducted a one-factor (gamification: yes or no) experimental study (n = 39) to test if gamification improves the self-regulation and performance of learners who used an OLM-based Intelligent Tutoring System to complete multiple-choice questions
+* found **no significant differences in self-regulation and performance when comparing the gamified and non-gamified groups** --> Considering prior research did not investigate gamification in similar settings, the fact that **gamification’s effect varies depending on the context and learning outcome likely explains our findings**
+* In terms of model presentation, research has explored TreeMap, Concept Map View, Chat Box, and Skills Bars, with the later being the mostly used (Bull and Kay , 2016).
+* Despite gamification being widely studied, it can sometimes be misunderstood when referred directly to as “learning through games.”
+* used the taxonomy by Toda et al. (2019) organizes 21 game elements into five dimensions and ended up implementing points and economy
+* Used MAI
+* **point-based reward systems seem to be ineffective for maximizing self-regulation and performance within the context of OLM-based applications**"		"@article{ferreira2024gamification,
+  title={Gamification and open learner model: An experimental study on the effects on self-regulatory learning characteristics},
+  author={Ferreira da Rocha, Fabr{\'\i}cio Domingos and Lemos, Bruno and Henrique de Brito, Pedro and Santos, Rodrigo and Rodrigues, Luiz and Isotani, Seiji and Dermeval, Diego},
+  journal={Education and Information Technologies},
+  volume={29},
+  number={3},
+  pages={3525--3546},
+  year={2024},
+  publisher={Springer},
+  doi={https://doi.org/10.1007/s10639-023-11906-2}
+}"	ID_062 | Finds pos impact of gamification;ID_063 | Finds pos impact of gamification	Gamification;OLM;Metacognition - Intervention;Empirical;Self-regulated learning
+ID_062	https://www.sciencedirect.com/science/article/pii/S0360131525000466?casa_token=moy7n_EeM5oAAAAA:qc7-ah8sr9zAIjfjw5-2M7gatq9e-106mldTMVe_DCm8ucLqhUz6QUmOlhUR4eQ2zZJWw_8X	Gulipari Maimaiti;Khe Foon Hew	2025	Gamification bolsters self-regulated learning, learning performance and reduces strategy decline in flipped classrooms: A longitudinal quasi-experiment	Article	Computers & Education	"*  we introduced a **gamified self-regulated flipped learning (GSRFL) approach**. This approach integrates gamification elements and self-regulation supports, such as a **learning analytics dashboard**, to motivate and aid students' behaviors across three main SRL stages: planning, execution, and self-evaluation
+* longitudinal quasi-experimental study with first-year university students (N=151)
+* Results showed that **gamification significantly improved students' English learning achievement and overall SRL behaviors**. **Longitudinal observations revealed a positive main intervention effect on metacognitive monitoring behaviors, despite a natural decline in SRL behaviors over time**. Gamification effectively moderated the decline of underutilized SRL strategies like goal setting and time management
+* it is crucial to recognize that students’ ability to effectively use SRL strategies relies not only on their competence but also on their motivation to sustain the effort required to apply these strategies
+* regardless of the group (gamification or not), students prioritized SRL behaviors similarly, with **gamification boosting their (SRL) active engagement**
+* result contrasts with the findings of Qiao et al. (2022), who reported no significant differences in students’ SRL among the self-regulated gamified, gamified, and control groups --> Explain this with: they relied on self-reported measures of SRL, and their intervention was shorter in duration, potentially limiting its impact"	"Taken from paper highlights:
+* Gamified SRL boosts English learning achievement.
+* Gamified SRL enhances long-term SRL behaviors.
+* Gamification moderates SRL strategy decline."		ID_063 | survey (primary school), highlights need for adaptive feedback	Gamification;Empirical;Self-regulated learning
+ID_063	https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1692949/full?=	Hongling Wu;Xingting Wang	2026	AI-driven gamification and metacognitive strategy development: a study of primary school English vocabulary learning from a self-regulated learning perspective	Article	Frontiers in Psychology	"* **meta-analysis** of 45 empirical studies conducted between 2019 and 2024
+* research reveals that **AI-driven gamified learning environments demonstrate significant effects in promoting vocabulary acquisition** (Cohen’s d = 0.72), **enhancing metacognitive awareness** (Cohen’s d = 0.68), **and improving learning persistence** (Cohen’s d = 0.64)
+* Adaptive feedback mechanisms played a crucial mediating role
+* significant moderating effects of cultural context, technology acceptance, and teacher support on AI gamification outcomes
+* **Research gaps:* current studies lack in-depth theoretical analysis and empirical verification of the mechanisms through which AI technology specifically promotes learners’ metacognitive strategy development
+
+relatively insufficient longitudinal studies tracking the long-term developmental impacts of AI-gamified learning environments on learners"		"@article{wu2026ai,
+  title={AI-driven gamification and metacognitive strategy development: a study of primary school English vocabulary learning from a self-regulated learning perspective},
+  author={Wu, Hongling and Wang, Xingting},
+  journal={Frontiers in Psychology},
+  volume={17},
+  pages={1692949},
+  year={2026},
+  publisher={Frontiers},
+  doi={10.3389/fpsyg.2026.1692949}
+}"		Self-regulated learning;Gamification;Survey;Metacognition;Metacognition - Intervention;GenAI - Effects on Learning
+ID_064	https://link.springer.com/article/10.1007/s10639-023-12022-x	Cui-Yu Wang;Bao-Lian Gao;Shu-Jie Chen	2024	The effects of metacognitive scaffolding of project-based learning environments on students’ metacognitive ability and computational thinking	Article	Education and Information technologies	"* this study **designed a metacognitive scaffolding** in four aspects: planning, monitoring, reflecting and evaluating, **and assessed the effects of this scaffolding on students' CT, learning achievement and metacognitive abilities through a quasi-experimental design**
+* The participants were 70 students aged 9–11 years in elementary school
+*  the experimental group (38 students) used a **metacognitive scaffolding-based project-based learning approach**, while the control group (32 students) used a **traditional project-based learning approach for coding**
+* results indicate that **metacognitive scaffolding has a facilitative effect in helping students improve their CT and learning achievement, but does not significantly improve metacognitive abilities**"		"@article{wang2024effects,
+  title={The effects of metacognitive scaffolding of project-based learning environments on students’ metacognitive ability and computational thinking},
+  author={Wang, Cui-Yu and Gao, Bao-Lian and Chen, Shu-Jie},
+  journal={Education and Information Technologies},
+  volume={29},
+  number={5},
+  pages={5485--5508},
+  year={2024},
+  publisher={Springer},
+  doi={10.1007/s10639-023-12022-x}
+}"	ID_008 | Both about CS	Metacognition - Intervention;Empirical;Coding;Metacognition
+ID_065	https://onlinelibrary.wiley.com/doi/abs/10.1111/jcal.70117?casa_token=vwoAfKvbgvIAAAAA%3AXY0sFGXBhChT1rLjcZNiy_8MsiXy7njjoNdc7qYe-dmvZpqCHm2ql6-yPe4Ip4ZuvcjNXabeVU49AQeesA	Nan Ma;Zhiyong Zhong	2025	A Meta-Analysis of the Impact of Generative Artificial Intelligence on Learning Outcomes	Article	JCAL	"*  A **meta-analysis** was performed on 34 experimental and quasi-experimental studies published internationally.
+* meta-analysis indicates that **Generative Artificial Intelligence has a significant positive impact** on overall learning outcomes, with a combined effect size of 0.68 (p < 0.001)
+* The analysis of moderating variables reveals that the **effectiveness of GAI is influenced by discipline type but is not significantly affected by instructional period, knowledge type, prior knowledge level, or tool type**. Specifically, **GAI exhibits the highest positive effects in mathematics, science and humanities**, whereas its impact is relatively lower yet still significant in computer science and medical/nursing education. 
+* To optimise GAI's use in education, the **study suggests aligning GAI with specific subject needs**, adapting tools for different student levels, integrating GAI with traditional teaching and establishing monitoring mechanisms."		"@article{ma2025meta,
+  title={A Meta-Analysis of the Impact of Generative Artificial Intelligence on Learning Outcomes},
+  author={Ma, Nan and Zhong, Zhiyong},
+  journal={Journal of Computer Assisted Learning},
+  volume={41},
+  number={5},
+  pages={e70117},
+  year={2025},
+  publisher={Wiley Online Library},
+  doi={10.1111/jcal.70117}
+}"		GenAI - Effects on Learning;Survey
+ID_066	https://scholar.google.de/scholar?hl=en&as_sdt=0%2C5&q=Modelling+the+Components+of+Metacognitive+Awareness&btnG=	Heli Kallio;Kalle Virta;Manne Kallio	2018	Modelling the Components of Metacognitive Awareness	Article	nternational Journal of Educational Psychology	"* **Great to cite when justifying using metacognitive awareness as term that encompasses both knolwedge and regulation of cognition**
+*The **findings of this study** extensively **confirm that planning and knowledge of conditions predict success through the learning process**
+* In earlier studies self-evaluation is aligned as a sub-
+component of regulation of cognition. However, in this study we point out that self-
+evaluation does not actually regulate the ongoing or forthcoming process but it is a
+tool used to reflect both knowledge and regulation
+* The results encourage teachers to support students in improving their metacognitive awareness, i.e. expect them to set goals for their own learning."		"@article{kallio2018modelling,
+  title={Modelling the components of metacognitive awareness},
+  author={Kallio, Heli and Virta, Kalle and Kallio, Manne},
+  journal={International Journal of Educational Psychology},
+  volume={7},
+  number={2},
+  pages={94--122},
+  year={2018},
+  doi={10.17583/ijep.2018.2789}
+}"		Metacognition - Framework;Metacognition
+ID_067	https://tesolunion.org/attachments/files/3NTA50NZNLEMTCZ0NTNMCYTFI0NMVHEODNLEY2U5AMDKY1MWEXEODVI4NGUYDMMIYEMDY41MZDM6ZGJK4MMRKFNDU11LJQ16NJQZ4NZYY0LMQ1.pdf	Ngo Cong-Lem;Thang Tat Nguyen;Khanh Nhat Hoang Nguyen	2025	Critical Thinking in the Age of Generative AI: Effects of a Short-Term Experiential Learning Intervention on EFL Learners	Article	International Journal of TESOL Studies	"* 90-minute workshop in an english as a foreign lanugage class wih 72 uni students across 2 conditions
+* used experienal methods scaffold
+* significant improvements in overall critical thinking and each of the four subdomains—
+analytical skills, logical reasoning, evidence evaluation, and open-mindedness—among participants
+in the experimental group. "		"@article{ngoconglem2025,
+  author    = {Ngo Cong-Lem and Thang Tat Nguyen and Khanh Nhat Hoang Nguyen},
+  title     = {{Critical Thinking in the Age of Generative AI: Effects of a Short-Term Experiential Learning Intervention on EFL Learners}},
+  journal   = {International Journal of TESOL Studies},
+  year      = {2025},
+  volume    = {7},
+  pages     = {1--21},
+  articleno = {250522},
+  doi       = {10.58304/ijts.250522}
+}"	ID_068 | In classroom interventions	In classroom;Metacognition - Intervention;Empirical
+ID_068	https://arxiv.org/pdf/2505.00100?	Ethan Dickey;Andres Bejarano;Rhianna Kuperus;Bárbara Fagundes	2025	Evaluating the AI-Lab Intervention: Impact on Student Perception and Use of Generative AI in Early Undergraduate Computer Science Courses	Preprint	ArXiv	"* **Over three regular semesters at Purdue University**, we implemented the AI-Lab in two mandatory Data Structures and Algorithms courses, one elective Competitive Programming course, and one first-year engineering course, yielding 831 valid student
+responses. Using a mixed-methods approach
+* observed large effect sizes in comfort and openness across conceptual, debugging, and homework problems. Notably, usage patterns for
+debugging also shifted statistically significantly, reflecting students’ more mindful and deliberate approach
+* ultimately heightening students’ awareness of their own skill development
+* Our findings **underscore that structured scaffolding – such as the AI-Lab – can help students harness GenAI’s benefits without undermining core problem-solving abilities**
+* AI lab is a classical mix of insrucional and experiential classroom approaches"		"@article{dickey2025evaluating,
+  title={Evaluating the AI-Lab intervention: Impact on student perception and use of generative AI in early undergraduate computer science courses},
+  author={Dickey, Ethan and Bejarano, Andres and Kuperus, Rhianna and Fagundes, B{\'a}rbara},
+  journal={arXiv preprint arXiv:2505.00100},
+  year={2025}
+}"		In classroom;Empirical;Metacognition - Intervention
